@@ -1,210 +1,219 @@
 # ❤️ ArrhythmiaScan AI
+### Hybrid ML–DL Pipeline for Precision Cardiac Arrhythmia Detection
 
-  Hybrid ML–DL Pipeline for Precision Cardiac Arrhythmia Detection
+ArrhythmiaScan AI is a high-performance diagnostic pipeline that detects cardiac arrhythmias from ECG signals using the MIT-BIH dataset. By combining expert-driven feature engineering with automated deep learning feature extraction, it offers a robust and comparative framework for cardiovascular health assessment.
 
-  ArrhythmiaScan AI is a high-performance diagnostic pipeline designed to detect cardiac arrhythmias from ECG signals using the MIT-BIH dataset. By combining expert-driven feature
-  engineering with automated deep learning feature extraction, the system provides a robust and comparative framework for cardiovascular health assessment.
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?logo=scikit-learn&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter&logoColor=white)
 
-  ![License: MIT (https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-  ![Python 3.10+ (https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-  ![PyTorch (https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
-  ![Scikit-Learn (https://img.shields.io/badge/Scikit--Learn-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-  ![Jupyter (https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter&logoColor=white)](https://jupyter.org/)
+---
 
-  Features (#-features) • Approach (#-approach) • Insights (#-key-insights) • Installation (#-installation) • Contact (#-contact)
+## 📋 Table of Contents
 
-  ---
+- [Overview](#-overview)
+- [Features](#-features)
+- [Technology Stack](#-technology-stack)
+- [Project Pipeline](#-project-pipeline)
+- [Project Structure](#-project-structure)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Machine Learning Models](#-machine-learning-models)
+- [Key Insights](#-key-insights)
+- [Roadmap](#-roadmap)
+- [Author](#-author)
+- [License](#-license)
 
-  📋 Table of Contents
+---
 
-   - Overview (#-overview)
-   - Features (#-features)
-   - Technology Stack (#-technology-stack)
-   - Project Pipeline (#-project-pipeline)
-   - Project Structure (#-project-structure)
-   - Installation (#-installation)
-   - Usage (#-usage)
-   - Machine Learning Models (#-machine-learning-models)
-   - Key Insights (#-key-insights)
-   - Roadmap (#-roadmap)
-   - Author (#-author)
-   - License (#-license)
+## 🎯 Overview
 
-  ---
+ArrhythmiaScan AI addresses the critical need for automated and accurate ECG interpretation. Cardiac arrhythmias — irregular heart rhythms — can lead to severe complications if left undetected. This project automates the detection process by bridging traditional signal processing with modern deep learning.
 
-  🎯 Overview
+**The Challenge**
 
-  ArrhythmiaScan AI addresses the critical need for automated and accurate ECG interpretation. Cardiac arrhythmias are irregular heart rhythms that can lead to severe complications if
-  undetected. This project automates the detection process by bridging traditional signal processing with modern deep learning.
+Manual ECG interpretation by clinicians is time-consuming and prone to error, particularly during long-term monitoring.
 
-  The Challenge
-  Manual interpretation of ECG signals by clinicians is time-consuming and susceptible to human error, especially during long-term monitoring. 
+**Our Solution**
 
-  Our Solution
-  ArrhythmiaScan AI implements a dual-stream architecture:
-   - Feature-Engineered ML: Leverages statistical and temporal characteristics for high precision.
-   - Deep 1D-CNN: Utilizes raw signal data for automated hierarchical feature extraction.
-   - Comparative Analysis: Provides a rigorous benchmark between traditional ML and modern DL approaches.
+ArrhythmiaScan AI implements a dual-stream architecture:
 
-  ---
+- **Feature-Engineered ML** — leverages statistical and temporal characteristics for high precision.
+- **Deep 1D-CNN** — processes raw signal data for automated hierarchical feature extraction.
+- **Comparative Analysis** — provides a rigorous benchmark between traditional ML and modern DL approaches.
 
-  ✨ Features
+---
 
-  🔬 Signal Processing & Preprocessing
-   - Noise Filtering: Advanced techniques to remove artifacts from raw ECG signals.
-   - Beat Segmentation: Precise extraction of individual heartbeats for focused analysis.
-   - Normalization: Standardizing signals across different patient records for model stability.
+## ✨ Features
 
-  🧠 Hybrid Modeling
-   - Machine Learning: Expert-driven feature engineering (Statistical & Temporal).
-   - Deep Learning: 1D Convolutional Neural Network (CNN) for raw signal processing.
-   - High Accuracy: Achieved 97% accuracy with ML and 93% with Deep Learning.
+### 🔬 Signal Processing & Preprocessing
+- **Noise Filtering** — advanced techniques to remove artifacts from raw ECG signals.
+- **Beat Segmentation** — precise extraction of individual heartbeats for focused analysis.
+- **Normalization** — standardizes signals across patient records for model stability.
 
-  📊 Evaluation & Visualization
-   - Comprehensive Metrics: Accuracy, Precision, Recall, and F1-score evaluation.
-   - Wavelet Analysis: Signal decomposition for deeper temporal-frequency insights.
-   - Comparative Benchmarking: Direct performance comparison between ML and DL streams.
+### 🧠 Hybrid Modeling
+- **Machine Learning** — expert-driven feature engineering using statistical and temporal descriptors.
+- **Deep Learning** — 1D Convolutional Neural Network (CNN) for end-to-end raw signal processing.
+- **High Accuracy** — 97% accuracy with ML and 93% with the deep learning stream.
 
-  ---
+### 📊 Evaluation & Visualization
+- **Comprehensive Metrics** — accuracy, precision, recall, and F1-score across all classes.
+- **Wavelet Analysis** — signal decomposition for temporal-frequency insights.
+- **Comparative Benchmarking** — direct performance comparison between ML and DL streams.
 
-  🛠️ Technology Stack
+---
 
-  ┌───────────────────┬─────────────────────────────┐
-  │ Layer             │ Technology                  │
-  ├───────────────────┼─────────────────────────────┤
-  │ Core Language     │ Python 3.10+                │
-  │ Deep Learning     │ PyTorch                     │
-  │ Machine Learning  │ Scikit-learn, NumPy, Pandas │
-  │ Signal Processing │ Scipy, Wavelet Transforms   │
-  │ Visualization     │ Matplotlib, Seaborn         │
-  │ Environment       │ Jupyter Notebooks           │
-  └───────────────────┴─────────────────────────────┘
-  ---
+## 🛠️ Technology Stack
 
-  🏗️ Project Pipeline
+| Layer              | Technology                          |
+|--------------------|-------------------------------------|
+| Core Language      | Python 3.10+                        |
+| Deep Learning      | PyTorch                             |
+| Machine Learning   | Scikit-learn, NumPy, Pandas         |
+| Signal Processing  | SciPy, Wavelet Transforms           |
+| Visualization      | Matplotlib, Seaborn                 |
+| Environment        | Jupyter Notebooks                   |
 
-  Data Source
-   - MIT-BIH Arrhythmia Dataset: The gold standard database from PhysioNet.
+---
 
-  Workflow
+## 🏗️ Project Pipeline
 
-    1 ┌─────────────────┐
-    2 │ ECG Raw Input   │  MIT-BIH Signal Records
-    3 └────────┬────────┘
-    4          │
-    5          ▼
-    6 ┌─────────────────┐
-    7 │ Preprocessing   │  Noise Filtering & Segmentation
-    8 └────────┬────────┘
-    9          │
-   10     ┌────┴────┐
-   11     ▼         ▼
-   12 ┌─────────┐ ┌───────────┐
-   13 │ ML Path │ │ DL Path   │
-   14 │(Feature)│ │ (1D-CNN)  │
-   15 └────┬────┘ └─────┬─────┘
-   16      │            │
-   17      └─────┬──────┘
-   18            ▼
-   19 ┌─────────────────┐
-   20 │ Evaluation      │  Accuracy: ML (97%) vs CNN (93%)
-   21 └─────────────────┘
+**Data Source:** MIT-BIH Arrhythmia Dataset (PhysioNet)
 
-   1 ArrhythmiaScanAI/
-   2 ├── code.ipynb                # Core end-to-end pipeline
-   3 ├── model_cnn.ipynb           # Deep Learning (1D-CNN) implementation
-   4 ├── model_mlbased.ipynb       # Feature-based Machine Learning work
-   5 ├── testing.ipynb             # Model evaluation & metrics
-   6 ├── wavelate.ipynb            # Wavelet signal processing experiments
-   7 ├── best_ecg_1dcnn_balanced.pth # Pre-trained CNN weights
-   8 └── README.md                 # Documentation
+```
+┌─────────────────┐
+│  ECG Raw Input  │  MIT-BIH Signal Records
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Preprocessing  │  Noise Filtering & Beat Segmentation
+└────────┬────────┘
+         │
+    ┌────┴────┐
+    ▼         ▼
+┌─────────┐ ┌───────────┐
+│ ML Path │ │  DL Path  │
+│(Feature)│ │ (1D-CNN)  │
+└────┬────┘ └─────┬─────┘
+     │             │
+     └──────┬──────┘
+            ▼
+┌─────────────────────────────────┐
+│           Evaluation            │
+│  ML Accuracy: 97% | CNN: 93%    │
+└─────────────────────────────────┘
+```
 
-  ---
+---
 
-  🚀 Installation
+## 📁 Project Structure
 
-  Prerequisites
-   - Python 3.10 or higher
-   - Pip package manager
+```
+ArrhythmiaScanAI/
+├── code.ipynb                     # Core end-to-end pipeline
+├── model_cnn.ipynb                # Deep Learning (1D-CNN) implementation
+├── model_mlbased.ipynb            # Feature-based Machine Learning workflow
+├── testing.ipynb                  # Model evaluation & metrics
+├── wavelate.ipynb                 # Wavelet signal processing experiments
+├── best_ecg_1dcnn_balanced.pth    # Pre-trained CNN weights
+└── README.md                      # Documentation
+```
 
-  Step 1: Clone Repository
+---
 
-   1 git clone https://github.com/addy12bag/Arrhythmia-Prediction-.git
-   2 cd Arrhythmia-Prediction-
+## 🚀 Installation
 
-  Step 2: Environment Setup
+**Prerequisites**
+- Python 3.10 or higher
+- pip package manager
 
-   1 # Recommended: Create a virtual environment
-   2 python -m venv venv
-   3 source venv/bin/activate  # Windows: .\venv\Scripts\activate
-   4
-   5 # Install dependencies
-   6 pip install -r requirements.txt
+**Step 1 — Clone the Repository**
 
-  ---
+```bash
+git clone https://github.com/addy12bag/Arrhythmia-Prediction-.git
+cd Arrhythmia-Prediction-
+```
 
-  💻 Usage
+**Step 2 — Set Up the Environment**
 
-   1. Launch Jupyter:
-   1    jupyter notebook
-   2. Execute Pipeline: Open code.ipynb to run the full preprocessing and modeling workflow.
-   3. Analyze Models: Explore model_cnn.ipynb and model_mlbased.ipynb for specific architecture details.
+```bash
+# Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate        # Windows: .\venv\Scripts\activate
 
-  ---
+# Install dependencies
+pip install -r requirements.txt
+```
 
-  🧠 Machine Learning Models
+---
 
-  Traditional ML Stream
-   - Features: 18+ Statistical and temporal features per beat.
-   - Performance: 97% Accuracy. 
-   - Verdict: Superior performance due to highly targeted feature engineering on the MIT-BIH dataset.
+## 💻 Usage
 
-  Deep Learning Stream
-   - Architecture: 1D Convolutional Neural Network (1D-CNN).
-   - Input: Raw segmented ECG waveform.
-   - Performance: 93% Accuracy.
-   - Verdict: High potential for scalability and generalization to larger, more diverse datasets.
+1. **Launch Jupyter:**
+   ```bash
+   jupyter notebook
+   ```
 
-  ---
+2. **Run the Full Pipeline:** Open `code.ipynb` to execute preprocessing and modeling end-to-end.
 
-  📊 Key Insights
+3. **Explore Individual Models:** Open `model_cnn.ipynb` or `model_mlbased.ipynb` for architecture-specific details.
 
-   1. Expert Knowledge: In medical signal processing, handcrafted features (ML) currently outperform raw signal learning (CNN) for specific datasets like MIT-BIH.
-   2. Scalability: While CNNs have slightly lower accuracy here, they eliminate the need for manual feature engineering, making them better for "big data" healthcare.
-   3. Signal Quality: Proper noise filtering is the most critical step in achieving high diagnostic accuracy.
+---
 
-  ---
+## 🧠 Machine Learning Models
 
-  🗺️ Roadmap
+### Traditional ML Stream
+- **Features:** 18+ statistical and temporal descriptors per beat.
+- **Accuracy:** 97%
+- **Verdict:** Superior performance due to highly targeted feature engineering on the MIT-BIH dataset.
 
-   - [ ] Real-time Monitoring: Integrate with live ECG sensor data.
-   - [ ] Explainable AI (XAI): Implement SHAP/Grad-CAM to highlight arrhythmia triggers in the signal.
-   - [ ] Web Dashboard: Build a React-based interface for clinician visualization.
-   - [ ] Multi-Dataset Training: Expand to PTB-XL and other global ECG databases.
+### Deep Learning Stream
+- **Architecture:** 1D Convolutional Neural Network (1D-CNN)
+- **Input:** Raw segmented ECG waveform
+- **Accuracy:** 93%
+- **Verdict:** Strong scalability potential — eliminates manual feature engineering, making it well-suited for larger, more diverse datasets.
 
-  ---
+---
 
-  👤 Author
+## 📊 Key Insights
 
-  Sayantan Bag  
-  M.Tech (Robotics)  
-  Specializing in AI, Machine Learning, and Intelligent Systems.
+1. **Expert Knowledge Wins (for now)** — on focused datasets like MIT-BIH, handcrafted features outperform raw signal learning. Domain expertise still matters.
 
-   - 📧 Email: sayantan.bag@example.com (mailto:sayantan.bag@example.com)
-   - 💼 GitHub: @addy12bag (https://github.com/addy12bag)
+2. **CNNs Scale Better** — while slightly less accurate here, 1D-CNNs generalize more readily to large, heterogeneous healthcare data without manual feature design.
 
-  ---
+3. **Preprocessing is Everything** — proper noise filtering is the single most critical step in achieving high diagnostic accuracy across both streams.
 
-  📄 License
+---
 
-  This project is licensed under the MIT License.
+## 🗺️ Roadmap
 
-  Copyright (c) 2026 Sayantan Bag.
+- [ ] **Real-time Monitoring** — integrate with live ECG sensor feeds.
+- [ ] **Explainable AI (XAI)** — implement SHAP/Grad-CAM to highlight arrhythmia triggers in signals.
+- [ ] **Web Dashboard** — build a React-based interface for clinician-facing visualization.
+- [ ] **Multi-Dataset Training** — expand to PTB-XL and other global ECG databases.
 
-  ---
+---
 
-  <div align="center">
+## 👤 Author
 
+**Sayantan Bag**
+M.Tech (Robotics) — Specializing in AI, Machine Learning, and Intelligent Systems
+
+- 📧 Email: [sayantan.bag@example.com](mailto:sayantan.bag@example.com)
+- 💼 GitHub: [@addy12bag](https://github.com/addy12bag)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Copyright © 2026 Sayantan Bag.
+
+---
+
+<div align="center">
   Developed with ❤️ for Intelligent Healthcare
-
-  </div>
+</div>
